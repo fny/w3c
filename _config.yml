@@ -2,5 +2,5 @@ safe: true
 pygments: true
 permalink: /posts/:title
 auto: true
-url: /fny
+url: /w3c
 tracking_id: UA-22189642-7

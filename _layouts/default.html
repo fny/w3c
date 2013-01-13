@@ -58,6 +58,9 @@
         -o-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0);
         box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 0px rgba(0, 0, 0, 0);
       }
+      section #title h1 {
+        font-size: 36px;
+      }
     </style>
   </head>
   <body>
@@ -66,21 +69,20 @@
         <div id="title">
           <h1>{{ page.title }}</h1>
           <hr>
-          <span class="credits left">Project by <a href="https://github.com/fny">fny</a></span>
+          <span class="credits left">Project by <a href="https://farazyashar.com">Faraz Yashar</a> (<a href="https://github.com/fny">fny</a>)</span>
           <span class="credits right">Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
         </div>
 
         <div id="header">
           <nav>
-            <li class="fork"><a href="//github.com/fny/w3c">View On GitHub</a></li>
-            <li class="downloads"><a href="//github.com/fny/w3c/zipball/master">ZIP</a></li>
-            <li class="downloads"><a href="//github.com/fny/w3c/tarball/master">TAR</a></li>
-            <li class="title">DOWNLOADS</li>
+            <li class="downloads"><a href="//github.com/fny/w3c">View On GitHub</a></li>
+            <li class="downloads"><a href="{{ site.url }}">Home</a></li>
+
           </nav>
         </div><!--/#header -->
         {{ content }}
       </section>
-      <footer style="text-align: center;"><p><a href="{{ site.url }}">Home</a> | <a href="mailto:faraz.yashar[At]gmail.com">Contact</a> | <a href="http://w3.org">W3C</a></p>
+      <footer style="text-align: center;"><p><a href="{{ site.url }}">Home</a> | <a href="//github.com/fny/w3c">View On GitHub</a> | <a href="http://w3.org">W3C</a></p>
 
       <p style="padding-top:3em;">
         <small>
