@@ -1,0 +1,36 @@
+---
+layout: default
+title: DeviceLightEvent
+---
+
+<p>
+As of 01/13/04, this demonstration requires <a href="http://www.mozilla.org/en-US/mobile/18.0/releasenotes/">Firefox Mobile 15</a> or higher and a device with an ambient light sensor.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Trigger Count</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="triggers">0</td>
+      <td id="value">?</td>
+    </tr>
+  </tbody>
+</table>
+
+<button id="view-source">View the Javascript</button> <a href="http://www.infoq.com/news/2013/01/ambient-light-proximity-dom" style="margin-left:1em;">&raquo; More on InfoQ</a>
+
+<div id="code-view">
+{% highlight javascript %}
+{% include device-light.js %}
+{% endhighlight %}
+</div>
+
+<script type="text/javascript">
+  {% include device-light.js %}
+  {% include view-code.js %}
+</script>

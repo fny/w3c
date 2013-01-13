@@ -1,0 +1,40 @@
+---
+layout: default
+title: DeviceProximityEvent
+---
+
+<p>
+As of 01/13/04, this demonstration requires <a href="http://www.mozilla.org/en-US/mobile/18.0/releasenotes/">Firefox Mobile 15</a> or higher and a device with a proximity sensor.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Trigger Count</th>
+      <th>Value</th>
+      <th>Min</th>
+      <th>Max</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="triggers">0</td>
+      <td id="value">?</td>
+      <td id="min">?</td>
+      <td id="max">?</td>
+    </tr>
+  </tbody>
+</table>
+
+<button id="view-source">View the Javascript</button> <a href="http://www.infoq.com/news/2013/01/ambient-light-proximity-dom" style="margin-left:1em;">&raquo; More on InfoQ</a>
+
+<div id="code-view">
+{% highlight javascript %}
+{% include device-proximity.js %}
+{% endhighlight %}
+</div>
+
+<script type="text/javascript">
+  {% include device-proximity.js %}
+  {% include view-code.js %}
+</script>
