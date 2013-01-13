@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="cleartype" content="on">
+<head>
+  <title>DeviceLightEvent Demo</title>
+  <style>
+    body {
+      font: 1em;
+    }
+    .hidden {
+      display: none;
+    }
+    table {
+      font-family: sans-serif;
+      background:#efefef;
+      border:#ccc 1px solid;
+      box-shadow: 0 1px 2px #d1d1d1;
+      text-align: center;
+      width: 100%;
+    }
+    caption{
+      font-weight: bold;
+    }
+    th {
+      padding: 10px;
+      border-bottom:1px solid #e0e0e0;
+      background: #eee;
+    }
+    td {
+      background: #f4f4f4;
+    }
+    button {
+      margin-top: 1em;
+      padding: .25em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Output -->
+  <table>
+    <caption><code>DeviceLightEvent</code> Output</caption>
+    <thead>
+      <tr>
+        <th>Trigger Count</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="triggers">0</td>
+        <td id="value">?</td>
+      </tr>
+    </tbody>
+  </table>
+  <!--/ Output -->
+
+  <button id="view-source">View the Javascript</button>
+
+  <pre><code id="code-view" class="hidden"></code></pre>
+
+  <footer>Tested on Firefox Mobile v15.0 with the Samsung Galaxy S</footer>
+
+  <script id="sample-code">
+    var triggers = document.getElementById("triggers");
+    var value = document.getElementById("value");
+    var numTriggers = 0;
+    function callback(event){
+      triggers.innerHTML = numTriggers++;
+      value.innerHTML = event.value;
+    }
+    window.addEventListener('devicelight', callback);
+  </script>
+
+  <script type="text/javascript">
+    // Show the Code
+    var codeView = document.getElementById('code-view');
+    codeView.innerHTML = document.getElementById('sample-code').innerHTML;
+    document.getElementById('view-source').addEventListener('click', function(){
+      codeView.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
