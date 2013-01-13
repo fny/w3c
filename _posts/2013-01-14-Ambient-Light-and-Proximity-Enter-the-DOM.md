@@ -12,7 +12,7 @@ As currently defined, the "[Proximity Events][w3c-proximity]" specification defi
 
 The object is passed to a special callback, defined in the HTML5 specification as an [event handler][event-handlers], which takes an event as its argument.
 
-```
+{% highlight javascript %}
 // Event Handler
 deviceProximityHandler = function(event) {
   document.writeln('min = ', event.min,
@@ -23,29 +23,29 @@ deviceProximityHandler = function(event) {
 
 // Assigning the Event Handler to a Listener
 window.addEventListener('deviceproximity', deviceProximityHandler);
-```
+{% endhighlight %}
 
 The `UserProximityEvent` is a bit less "exciting" and provides access to the boolean attribute `near` for object proximity indication:
 
-```
+{% highlight javascript %}
 userProximityHandler = function(event) {
   document.write('near = ', event.near); // e.g. => near = true/false
   document.write('<br>');
 }
 
 window.addEventListener('userproximity', userProximityHandler);
-```
+{% endhighlight %}
 
 As currently defined, the "[Ambient Light Events][w3c-light]" specification defines two interfaces as well. The `DeviceLightEvent` provides a `value` attribute with the ambient light level in lux. The `LightLevelEvent` provides  information about the ambient light levels in terms three ranges "dim" (below 50 lux), "normal", and "bright" (above 10000 lux) as defined by the User Agent.
 
-```
+{% highlight javascript %}
 deviceLightHandler = function(event) {
   document.write('value = ', event.value); // e.g. => value = 10/100/1000
   document.write('<br>');
 }
 
 window.addEventListener('devicelight', deviceLightHandler);
-```
+{% endhighlight %}
 
 Currently, the [`DeviceProximityEvent`][moz-deviceproximity], [`UserProximityEvent`][moz-userproximity], and [`DeviceLightEvent`][moz-devicelight] are available in Firefox Mobile Beta versions 15 and up. Support for ambient light sensors in Firefox Beta for Windows [may be arriving soon as well][moz-windows-light-support]. Remember, that as sample implementations, the features provided are subject to significant change. For example, Mozilla's implementation of [`DeviceLightEvent`](moz-devicelight) provides access to a `min` and `max` which are no longer defined in the specification.
 
