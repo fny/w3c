@@ -1,6 +1,5 @@
-markdown: kramdown
 pygments: true
 permalink: /posts/:title
 auto: true
-url: /
+url: /fny
 tracking_id: UA-22189642-7
